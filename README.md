@@ -4,10 +4,13 @@
 # Setup Instructions 
   1. yarn / npm install
   2. get IP Address 
-     ** Windows: ** 
+     
+**Windows:** 
      ipconfig/all
 <img width="651" alt="Screen Shot 2021-08-29 at 23 32 00" src="https://user-images.githubusercontent.com/33171451/131258137-12cd0519-3a86-4675-98bc-36ecf51227b0.png">
-     ** Mac **
+     
+**Mac**
+      ifconfig
 <img width="570" alt="Screen Shot 2021-08-29 at 23 35 04" src="https://user-images.githubusercontent.com/33171451/131258141-8d81d519-a533-4860-b7e7-c6d21c5a86cf.png">
   3. Replace client address with your ip address in ** app.js **
      navigate to app.js by typing: `cd skillTestApplication`
