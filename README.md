@@ -42,9 +42,11 @@ ifconfig
 
 # Screenshots or GIFS
   Dark Mode Example
+  
   ![sportDark](https://user-images.githubusercontent.com/33171451/131258257-436515b3-2f79-4eb0-be0f-b7a597f1290d.gif)
   
   Default Mode Example
+  
   ![sportLight](https://user-images.githubusercontent.com/33171451/131258396-c29501a6-14b5-4739-8b8b-ba8f7837fe91.gif)
 
 # Coverage
