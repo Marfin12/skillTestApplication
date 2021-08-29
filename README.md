@@ -6,9 +6,9 @@
   2. get IP Address 
      ** Windows: ** 
      ipconfig/all
-      <img width="651" alt="Screen Shot 2021-08-29 at 23 32 00" src="https://user-images.githubusercontent.com/33171451/131258137-12cd0519-3a86-4675-98bc-36ecf51227b0.png">
+     <img width="651" alt="Screen Shot 2021-08-29 at 23 32 00" src="https://user-images.githubusercontent.com/33171451/131258137-12cd0519-3a86-4675-98bc-36ecf51227b0.png">
      ** Mac **
-      <img width="570" alt="Screen Shot 2021-08-29 at 23 35 04" src="https://user-images.githubusercontent.com/33171451/131258141-8d81d519-a533-4860-b7e7-c6d21c5a86cf.png">
+     <img width="570" alt="Screen Shot 2021-08-29 at 23 35 04" src="https://user-images.githubusercontent.com/33171451/131258141-8d81d519-a533-4860-b7e7-c6d21c5a86cf.png">
   3. Replace client address with your ip address in ** app.js **
      navigate to app.js by typing: `cd skillTestApplication`
      ex: 
@@ -39,7 +39,8 @@
   ![sportDark](https://user-images.githubusercontent.com/33171451/131258257-436515b3-2f79-4eb0-be0f-b7a597f1290d.gif)
   
   Default Mode Example
-  
+  ![sportLight](https://user-images.githubusercontent.com/33171451/131258396-c29501a6-14b5-4739-8b8b-ba8f7837fe91.gif)
+
 # Coverage
   <img width="1437" alt="Screen Shot 2021-08-29 at 22 13 13" src="https://user-images.githubusercontent.com/33171451/131258274-905f44a0-fd34-4aa5-822e-670ad5b7d385.png">
 
