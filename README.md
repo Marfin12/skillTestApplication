@@ -6,9 +6,9 @@
   2. get IP Address 
      ** Windows: ** 
      ipconfig/all
-     <img width="651" alt="Screen Shot 2021-08-29 at 23 32 00" src="https://user-images.githubusercontent.com/33171451/131258137-12cd0519-3a86-4675-98bc-36ecf51227b0.png">
+<img width="651" alt="Screen Shot 2021-08-29 at 23 32 00" src="https://user-images.githubusercontent.com/33171451/131258137-12cd0519-3a86-4675-98bc-36ecf51227b0.png">
      ** Mac **
-     <img width="570" alt="Screen Shot 2021-08-29 at 23 35 04" src="https://user-images.githubusercontent.com/33171451/131258141-8d81d519-a533-4860-b7e7-c6d21c5a86cf.png">
+<img width="570" alt="Screen Shot 2021-08-29 at 23 35 04" src="https://user-images.githubusercontent.com/33171451/131258141-8d81d519-a533-4860-b7e7-c6d21c5a86cf.png">
   3. Replace client address with your ip address in ** app.js **
      navigate to app.js by typing: `cd skillTestApplication`
      ex: 
@@ -45,4 +45,5 @@
   <img width="1437" alt="Screen Shot 2021-08-29 at 22 13 13" src="https://user-images.githubusercontent.com/33171451/131258274-905f44a0-fd34-4aa5-822e-670ad5b7d385.png">
 
 # lint
-  <img width="1440" alt="Screen Shot 2021-08-29 at 22 13 00" src="https://user-images.githubusercontent.com/33171451/131258280-8e499860-5a85-4b5d-9867-533dd0ba8167.png">
+  <img width="1432" alt="Screen Shot 2021-08-29 at 22 13 00" src="https://user-images.githubusercontent.com/33171451/131258473-d591f1b0-f293-4aed-94f5-d3e2799317ce.png">
+
