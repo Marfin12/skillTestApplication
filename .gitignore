@@ -84,7 +84,7 @@ android/fastlane/screenshots
 android/google_api_key.json
 
 # buildInfo
-app/Constants/BuildConstants.js
+.npmrc
 
 # Webpack
 webpack_cache/
