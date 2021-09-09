@@ -50,7 +50,9 @@ ifconfig
   ![sportLight](https://user-images.githubusercontent.com/33171451/131258396-c29501a6-14b5-4739-8b8b-ba8f7837fe91.gif)
 
 # Coverage
-  <img width="1437" alt="Screen Shot 2021-08-29 at 22 13 13" src="https://user-images.githubusercontent.com/33171451/131258274-905f44a0-fd34-4aa5-822e-670ad5b7d385.png">
+  [Uploading Screen Shot 2021-09-09 at 14.54.19.png…]()
+  Unit test including jest & mocha for server and client side
+
 
 # lint
   <img width="1432" alt="Screen Shot 2021-08-29 at 22 13 00" src="https://user-images.githubusercontent.com/33171451/131258473-d591f1b0-f293-4aed-94f5-d3e2799317ce.png">
