@@ -21,6 +21,8 @@ describe('Card', () => {
       )
       .toJSON();
 
+    console.log(wrapper)
+
     const borderColor = wrapper.props.style.backgroundColor;
     expect(borderColor).toEqual('#FFF');
   });
@@ -39,5 +41,22 @@ describe('Card', () => {
 
     const borderColor = wrapper.props.style.backgroundColor;
     expect(borderColor).toEqual('#000');
+  });
+
+  it('should call onpress props when card is clicked', () => {
+    const store = mockStore({
+      themeReducer: {theme: true},
+    });
+    const onPress = jest.fn();
+    const wrapper = renderer
+      .create(
+        <Provider store={store}>
+          <Card onPress={onPress} />
+        </Provider>,
+      )
+      .toJSON();
+
+    wrapper.props.onClick();
+    expect(onPress).toHaveBeenCalled();
   });
 });

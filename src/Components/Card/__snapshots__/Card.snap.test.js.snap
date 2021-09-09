@@ -3,7 +3,7 @@
 exports[`Card Component Dark Theme renders card component dark mode 1`] = `
 <View
   accessible={true}
-  focusable={false}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -30,7 +30,7 @@ exports[`Card Component Dark Theme renders card component dark mode 1`] = `
 exports[`Card Component Default Theme renders card component light mode 1`] = `
 <View
   accessible={true}
-  focusable={false}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

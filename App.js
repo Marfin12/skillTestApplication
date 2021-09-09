@@ -13,6 +13,8 @@ const client = new ApolloClient({
   uri: 'http://192.168.8.114:4000/graphql',
 });
 
+console.warn = () => {}
+
 const App = () => {
   var middlewares = applyMiddleware(thunk);
   const store = createStore(reducers, middlewares);

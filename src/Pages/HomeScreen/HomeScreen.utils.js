@@ -1,4 +1,5 @@
 const navigateToDetailScreen = (navigation, props) => () => {
+  console.log(navigation);
   navigation.navigate('Details', {props});
 };
 

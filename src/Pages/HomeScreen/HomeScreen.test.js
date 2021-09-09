@@ -13,7 +13,7 @@ it('should navigate to card detail when card item pressed', () => {
     navigate: jest.fn(),
   };
 
-  const cardItem = _renderItem(navigation, mockedProps);
+  const cardItem = _renderItem(mockedProps, navigation);
   cardItem.props.onPress();
 
   const expectedRoute = 'Details';

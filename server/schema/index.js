@@ -5,30 +5,11 @@ const {
   GraphQLString,
   GraphQLInt,
 } = require('graphql');
-const fetch = require('node-fetch');
 
-const BASE_URL = 'https://www.thesportsdb.com/api/v1/json/1/';
-const OTHER_URL = 'https://simple-contact-crud.herokuapp.com/contact';
-
-function fetchResponseByURL(relativeURL) {
-  return fetch(`${BASE_URL}${relativeURL}`).then(res => res.json());
-}
-
-function fetchSport() {
-  return fetchResponseByURL('/all_sports.php/').then(json => json.sports);
-}
-
-function updateContact(args) {
-  return fetch(encodeURI(`${OTHER_URL}`), {
-    method: 'POST',
-    body: JSON.stringify({
-      firstName: args.firstName,
-      lastName: args.lastName,
-      age: args.age,
-      photo: args.photo,
-    }),
-  }).then(result => result);
-}
+const {
+  fetchAllSports,
+  updateContact
+} = require('../services');
 
 const SportType = new GraphQLObjectType({
   name: 'Sports',
@@ -36,7 +17,7 @@ const SportType = new GraphQLObjectType({
   fields: () => ({
     id: {
       type: GraphQLString,
-      resolve: sports => sports.idSport,
+      resolve: sports => sports.id,
     },
     name: {
       type: GraphQLString,
@@ -70,7 +51,7 @@ const QueryType = new GraphQLObjectType({
   fields: () => ({
     sports: {
       type: new GraphQLList(SportType),
-      resolve: fetchSport,
+      resolve: fetchAllSports,
     },
   }),
 });

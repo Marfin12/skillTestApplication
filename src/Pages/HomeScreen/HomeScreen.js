@@ -4,10 +4,10 @@ import { graphql, compose } from 'react-apollo';
 
 import { getSportList } from '../../Graphql/sport.graphql';
 
-import ListView from '../../Components/ListView';
-import TextField from '../../Components/TextField';
 import Card from '../../Components/Card';
+import ListView from '../../Components/ListView';
 import HeaderList from '../../Components/HeaderList';
+import TextField from '../../Components/TextField';
 
 import styles from './HomeScreen.styles';
 import { navigateToDetailScreen } from './HomeScreen.utils';
@@ -18,23 +18,20 @@ const _renderItemContent = (name, description) => (
   <View style={styles.containerText}>
     <TextField textStyle={styles.title}> {name} </TextField>
     <TextField numberOfLines={3} style={styles.description}>
-      {' '}
+    {' '}
       {description}{' '}
     </TextField>
   </View>
 );
 
-export const _renderItem = (navigation, props) => {
+export const _renderItem = (props, navigation) => {
   const { name, description, image } = props;
 
   return (
     <Card
-      onPress={navigateToDetailScreen(navigation, props)}
-      name={name}
-      description={description}
-      image={image}>
-      <Image source={{uri: image}} style={styles.photo} />
-      {_renderItemContent(name, description)}
+      onPress={navigateToDetailScreen(navigation, props)}>
+        <Image source={{uri: image}} style={styles.photo} />
+        {_renderItemContent(name, description)}
     </Card>
   );
 };
@@ -45,7 +42,8 @@ const _renderEmpty = () => (
   </TextField>
 );
 
-const HomeScreen = props => (
+const HomeScreen = props => {
+  return (
   <React.Fragment>
     <ListView
       style={styles.listView}
@@ -57,5 +55,6 @@ const HomeScreen = props => (
     />
   </React.Fragment>
 );
+  };
 
 export default compose(graphql(getSportList))(HomeScreen);

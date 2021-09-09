@@ -12,8 +12,8 @@ const Card = (props: Props): React.Node => {
   return (
     <TouchableOpacity
       style={[styles.container(theme), props.style]}
-      onPress={props.onPress()}>
-      {props.children}
+      onPress={() => props.onPress()}>
+        {props.children}
     </TouchableOpacity>
   );
 };
