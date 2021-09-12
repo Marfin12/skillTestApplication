@@ -1,9 +1,13 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+
+import TextField from '../../Components/TextField';
+
+import styles from './FavoriteScreen.styles';
 
 const FavoriteScreen = () => (
-  <View>
-    <Text>Favorite Screen</Text>
+  <View style={styles.container}>
+    <TextField> Favorite Screen </TextField>
   </View>
 );
 

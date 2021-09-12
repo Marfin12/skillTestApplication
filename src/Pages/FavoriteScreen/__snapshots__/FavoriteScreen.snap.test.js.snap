@@ -1,9 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
-<View>
-  <Text>
-    Favorite Screen
-  </Text>
+exports[`renders favorite screen dark mode 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <TextField>
+     Favorite Screen 
+  </TextField>
+</View>
+`;
+
+exports[`renders favorite screen light mode 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <TextField>
+     Favorite Screen 
+  </TextField>
 </View>
 `;
