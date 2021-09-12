@@ -7,12 +7,25 @@ import {
   DefaultTheme,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import * as themeActions from './Redux/Actions/action';
 import Constants from './Constants';
-import { HomeScreen, DetailsScreen } from './Pages';
+import { HomeScreen, DetailsScreen, FavoriteScreen } from './Pages';
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const StackScreen = () => (
+  <Stack.Navigator initialRouteName="Home">
+    <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Screen
+      name="Details"
+      component={DetailsScreen}
+      options={({ route }) => ({ title: route.params.props.name })}
+    />
+  </Stack.Navigator>
+);
 
 const Main = () => {
   const { DARK_THEME, LIGHT_THEME } = Constants.THEME;
@@ -23,18 +36,14 @@ const Main = () => {
 
   React.useEffect(() => {
     dispatch(themeActions.ToggleTheme(globalTheme));
-  }, []);
+  }, [colorScheme]);
 
   return (
     <NavigationContainer theme={colorScheme}>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen
-          name="Details"
-          component={DetailsScreen}
-          options={({ route }) => ({ title: route.params.props.name })}
-        />
-      </Stack.Navigator>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={StackScreen} options={{ headerShown: false }} />
+        <Tab.Screen name="Favorite" component={FavoriteScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
