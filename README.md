@@ -38,22 +38,40 @@ ifconfig
   - Clean architecture
   - Dark / light mode using reducer
   - Tested by jest (snapshot & unit test)
+  ```diff
+  + Tested by mocha
+  + code style using linter
+  + Scrollable View
+  + Bottom-sheet navigation
+  ```
   - Fetch using graphql from react-apollo
+
+# What's New
+  - Dark / Light mode enhanced
+  - Bottom-sheet navigation
+  - Stack Screen inside Bottom-Sheet navigation
+  - Server testing using mocha
+  - Favorite Screen
+  - Scrollable view on detail screen
+  - Clean Architecture on backend
+  - More linter rules
 
 # Screenshots or GIFS
   Dark Mode Example
   
-  ![sportDark](https://user-images.githubusercontent.com/33171451/131258257-436515b3-2f79-4eb0-be0f-b7a597f1290d.gif)
+  ![Dark-Mode](https://user-images.githubusercontent.com/33171451/132995667-10eccb10-a850-4676-aa11-a62114c442f4.gif)
   
-  Default Mode Example
+  Light Mode Example
   
-  ![sportLight](https://user-images.githubusercontent.com/33171451/131258396-c29501a6-14b5-4739-8b8b-ba8f7837fe91.gif)
+  ![Light-Mode](https://user-images.githubusercontent.com/33171451/132995631-2e56d149-7af0-4b88-bad6-26ec4e5a4e17.gif)
+
 
 # Coverage
-  <img width="1440" alt="Screen Shot 2021-09-09 at 14 54 19" src="https://user-images.githubusercontent.com/33171451/132646323-aabc86fd-3c62-4712-a1ea-5558fdc17cb0.png">
-  Unit test including jest & mocha for server and client side
-
+  <img width="1439" alt="Screen Shot 2021-09-12 at 23 34 55" src="https://user-images.githubusercontent.com/33171451/132995524-35037cf3-1ab2-4d33-a647-b68e41774480.png">
 
 # lint
-  <img width="1432" alt="Screen Shot 2021-08-29 at 22 13 00" src="https://user-images.githubusercontent.com/33171451/131258473-d591f1b0-f293-4aed-94f5-d3e2799317ce.png">
+  <img width="1440" alt="Screen Shot 2021-09-12 at 23 13 07" src="https://user-images.githubusercontent.com/33171451/132995475-79b0428b-76d3-4a32-b566-f2747028d41f.png">
+
+# Unit Test
+<img width="1440" alt="Screen Shot 2021-09-12 at 23 12 25" src="https://user-images.githubusercontent.com/33171451/132995466-e8a8f027-85af-465d-9ead-4342d9f7a0c9.png">
 
