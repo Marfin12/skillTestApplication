@@ -13,7 +13,7 @@ const client = new ApolloClient({
   uri: 'http://192.168.8.114:4000/graphql',
 });
 
-console.warn = () => {}; // eslint-disable-line no-console
+console.warn = () => {};
 
 const App = () => {
   const middlewares = applyMiddleware(thunk);

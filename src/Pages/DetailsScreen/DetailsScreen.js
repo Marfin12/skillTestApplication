@@ -5,7 +5,6 @@ import TextField from '../../Components/TextField';
 
 import styles from './DetailsScreen.styles';
 
-/* eslint-disable react/destructuring-assignment */
 const DetailsScreen = (props) => {
   const data = props.route.params.props;
 
