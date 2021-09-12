@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, ScrollView } from 'react-native';
 
 import TextField from '../../Components/TextField';
 
@@ -9,12 +9,12 @@ const DetailsScreen = (props) => {
   const data = props.route.params.props;
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={styles.containerScroll}>
       <Image source={{ uri: data.image }} style={styles.photo} />
       <TextField style={styles.description}>
         {data.description}
       </TextField>
-    </View>
+    </ScrollView>
   );
 };
 
