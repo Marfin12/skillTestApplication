@@ -38,6 +38,6 @@ describe('App', () => {
       .toJSON();
 
     const { borderColor } = wrapper.props.style[0];
-    expect(borderColor).toEqual('#111');
+    expect(borderColor).toEqual('#222');
   });
 });

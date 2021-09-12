@@ -6,7 +6,7 @@ exports[`Header List Component Dark Theme renders header list component dark mod
     Array [
       Object {
         "borderBottomWidth": 3,
-        "borderColor": "#111",
+        "borderColor": "#222",
       },
       Object {},
     ]

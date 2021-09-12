@@ -13,7 +13,11 @@ const HeaderList = (props) => {
 
   return (
     <View style={[styles.container(theme), style]}>
-      <TextField textStyle={styles.text(theme)}>{children}</TextField>
+      <TextField
+        textStyle={styles.text(theme)}
+      >
+        {children}
+      </TextField>
     </View>
   );
 };

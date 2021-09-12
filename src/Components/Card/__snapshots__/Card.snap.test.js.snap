@@ -13,7 +13,7 @@ exports[`Card Component Dark Theme renders card component dark mode 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "backgroundColor": "#000",
+      "backgroundColor": "#222",
       "borderRadius": 5,
       "elevation": 2,
       "flex": 1,

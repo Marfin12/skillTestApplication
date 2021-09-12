@@ -5,7 +5,7 @@ const styles = {
     flex: 1,
     flexDirection: 'row',
     borderRadius: 5,
-    backgroundColor: whiteTheme ? colors.blackPrimary : colors.whitePrimary,
+    backgroundColor: whiteTheme ? colors.darkHeavyGray : colors.whitePrimary,
     padding: 10,
     marginTop: 8,
     marginBottom: 8,

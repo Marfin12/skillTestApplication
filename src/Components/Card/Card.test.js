@@ -38,7 +38,7 @@ describe('Card', () => {
       .toJSON();
 
     const borderColor = wrapper.props.style.backgroundColor;
-    expect(borderColor).toEqual('#000');
+    expect(borderColor).toEqual('#222');
   });
 
   it('should call onpress props when card is clicked', () => {
