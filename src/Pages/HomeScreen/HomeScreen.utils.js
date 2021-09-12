@@ -1,11 +1,10 @@
 const navigateToDetailScreen = (navigation, props) => () => {
-  console.log(navigation);
-  navigation.navigate('Details', {props});
+  navigation.navigate('Details', { props });
 };
 
-const apolloObjectCreator = sports => ({
+const apolloObjectCreator = (sports) => ({
   length: sports.length,
-  sports: sports,
+  sports,
 });
 
 const apolloMapCreator = () => {
@@ -17,4 +16,4 @@ const apolloMapCreator = () => {
   return queryStore;
 };
 
-export {navigateToDetailScreen, apolloObjectCreator, apolloMapCreator};
+export { navigateToDetailScreen, apolloObjectCreator, apolloMapCreator };

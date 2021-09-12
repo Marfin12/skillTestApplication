@@ -5,9 +5,9 @@ const lightHeavyGray = '#EEE';
 const lightMediumGray = '#DDD';
 
 export default {
-    whitePrimary,
-    blackPrimary,
-    darkHeavyGray,
-    lightHeavyGray,
-    lightMediumGray
+  whitePrimary,
+  blackPrimary,
+  darkHeavyGray,
+  lightHeavyGray,
+  lightMediumGray,
 };

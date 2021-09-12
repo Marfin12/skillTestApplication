@@ -33,9 +33,7 @@ exports[`renders detail screen dark mode 1`] = `
       }
     }
   >
-     
     some description
-     
   </TextField>
 </View>
 `;
@@ -73,9 +71,7 @@ exports[`renders detail screen light mode 1`] = `
       }
     }
   >
-     
     some description
-     
   </TextField>
 </View>
 `;

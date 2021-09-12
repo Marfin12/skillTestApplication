@@ -1,1 +1,1 @@
-export {default} from './HeaderList.component';
+export { default } from './HeaderList.component';

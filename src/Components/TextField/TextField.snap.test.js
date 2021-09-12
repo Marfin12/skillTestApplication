@@ -16,18 +16,10 @@ jest.mock('react-redux', () => {
     ...ActualReactRedux,
     useSelector: jest
       .fn()
-      .mockImplementationOnce(() => {
-        return lightMode;
-      })
-      .mockImplementationOnce(() => {
-        return lightMode;
-      })
-      .mockImplementationOnce(() => {
-        return darkMode;
-      })
-      .mockImplementationOnce(() => {
-        return darkMode;
-      }),
+      .mockImplementationOnce(() => lightMode)
+      .mockImplementationOnce(() => lightMode)
+      .mockImplementationOnce(() => darkMode)
+      .mockImplementationOnce(() => darkMode),
   };
 });
 

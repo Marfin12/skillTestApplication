@@ -1,1 +1,1 @@
-export {default} from './DetailsScreen';
+export { default } from './DetailsScreen';

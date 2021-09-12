@@ -5,15 +5,16 @@ import { useSelector } from 'react-redux';
 import styles from './Card.styles';
 import config from './Card.config';
 
-const Card = (props: Props): React.Node => {
-  const getSelect = useSelector(({themeReducer}) => themeReducer);
-  const theme = getSelect.theme;
+const Card = (props) => {
+  const getSelect = useSelector(({ themeReducer }) => themeReducer);
+  const { theme } = getSelect;
 
   return (
     <TouchableOpacity
       style={[styles.container(theme), props.style]}
-      onPress={() => props.onPress()}>
-        {props.children}
+      onPress={() => props.onPress()}
+    >
+      {props.children}
     </TouchableOpacity>
   );
 };

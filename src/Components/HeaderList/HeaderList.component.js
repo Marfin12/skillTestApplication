@@ -6,10 +6,10 @@ import styles from './HeaderList.styles';
 import config from './HeaderList.config';
 import TextField from '../TextField';
 
-const HeaderList = (props: Props): React.Node => {
-  const getSelect = useSelector(({themeReducer}) => themeReducer);
-  const theme = getSelect.theme;
-  const {style, children} = props;
+const HeaderList = (props) => {
+  const getSelect = useSelector(({ themeReducer }) => themeReducer);
+  const { theme } = getSelect;
+  const { style, children } = props;
 
   return (
     <View style={[styles.container(theme), style]}>

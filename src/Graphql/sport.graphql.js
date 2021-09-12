@@ -1,4 +1,4 @@
-import {gql} from 'apollo-boost';
+import { gql } from 'apollo-boost';
 
 const getSportList = gql`
   {
@@ -11,4 +11,4 @@ const getSportList = gql`
   }
 `;
 
-export {getSportList};
+export { getSportList };

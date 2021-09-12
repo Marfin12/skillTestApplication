@@ -4,12 +4,12 @@ import { View, FlatList } from 'react-native';
 import styles from './ListView.styles';
 import config from './ListView.config';
 
-const ListView = props => (
+const ListView = (props) => (
   <View style={[styles.container, props.style]}>
     <FlatList
       contentContainerStyle={styles.contentContainer}
       data={props.item}
-      renderItem={({item}) => props.itemList(item, props.navigation)}
+      renderItem={({ item }) => props.itemList(item, props.navigation)}
       ListEmptyComponent={props.emptyList()}
       ListHeaderComponent={props.headerList()}
     />

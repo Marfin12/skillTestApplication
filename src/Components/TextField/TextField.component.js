@@ -5,19 +5,22 @@ import { useSelector } from 'react-redux';
 import styles from './TextField.styles';
 import config from './TextField.config';
 
-const TextField = props => {
-  const getSelect = useSelector(({themeReducer}) => themeReducer);
-  const theme = getSelect.theme;
-  const {darkThemeColor, defaultThemeColor, style, textStyle, children} = props;
+const TextField = (props) => {
+  const getSelect = useSelector(({ themeReducer }) => themeReducer);
+  const { theme } = getSelect;
+  const {
+    darkThemeColor, defaultThemeColor, style, textStyle, children, numberOfLines,
+  } = props;
 
   return (
     <View style={style}>
       <Text
-        numberOfLines={props.numberOfLines}
+        numberOfLines={numberOfLines}
         style={[
           styles.text(theme, darkThemeColor, defaultThemeColor),
           textStyle,
-        ]}>
+        ]}
+      >
         {children}
       </Text>
     </View>

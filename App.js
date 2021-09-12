@@ -1,22 +1,22 @@
 import * as React from 'react';
-import {ApolloProvider} from 'react-apollo';
+import { ApolloProvider } from 'react-apollo';
 
 import ApolloClient from 'apollo-boost';
 
-import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-import {Main, reducers} from './src';
+import { Main, reducers } from './src';
 
 const client = new ApolloClient({
   uri: 'http://192.168.8.114:4000/graphql',
 });
 
-console.warn = () => {}
+console.warn = () => {}; // eslint-disable-line no-console
 
 const App = () => {
-  var middlewares = applyMiddleware(thunk);
+  const middlewares = applyMiddleware(thunk);
   const store = createStore(reducers, middlewares);
 
   return (

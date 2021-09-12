@@ -8,7 +8,7 @@ const {
 
 const {
   fetchAllSports,
-  updateContact
+  updateContact,
 } = require('../services');
 
 const SportType = new GraphQLObjectType({
@@ -17,19 +17,19 @@ const SportType = new GraphQLObjectType({
   fields: () => ({
     id: {
       type: GraphQLString,
-      resolve: sports => sports.id,
+      resolve: (sports) => sports.id,
     },
     name: {
       type: GraphQLString,
-      resolve: sports => sports.strSport,
+      resolve: (sports) => sports.strSport,
     },
     description: {
       type: GraphQLString,
-      resolve: sports => sports.strSportDescription,
+      resolve: (sports) => sports.strSportDescription,
     },
     image: {
       type: GraphQLString,
-      resolve: sports => sports.strSportThumb,
+      resolve: (sports) => sports.strSportThumb,
     },
   }),
 });
@@ -40,7 +40,7 @@ const ContactType = new GraphQLObjectType({
   fields: () => ({
     message: {
       type: GraphQLInt,
-      resolve: message => message.status,
+      resolve: (message) => message.status,
     },
   }),
 });
@@ -63,10 +63,10 @@ const MutationType = new GraphQLObjectType({
     contact: {
       type: ContactType,
       args: {
-        firstName: {type: GraphQLString},
-        lastName: {type: GraphQLString},
-        age: {type: GraphQLInt},
-        photo: {type: GraphQLString},
+        firstName: { type: GraphQLString },
+        lastName: { type: GraphQLString },
+        age: { type: GraphQLInt },
+        photo: { type: GraphQLString },
       },
       resolve(parent, args) {
         return updateContact(args);

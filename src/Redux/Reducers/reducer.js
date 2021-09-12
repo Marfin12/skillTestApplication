@@ -1,14 +1,14 @@
 import Constants from '../../Constants';
 
-const {DARK_THEME, LIGHT_THEME} = Constants;
-const initialState = {theme: false};
+const { DARK_THEME, LIGHT_THEME } = Constants;
+const initialState = { theme: false };
 
 export default (theme = initialState, action) => {
   switch (action.type) {
     case DARK_THEME:
-      return {theme: true};
+      return { theme: true };
     case LIGHT_THEME:
-      return {theme: false};
+      return { theme: false };
     default:
       return theme;
   }

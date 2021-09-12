@@ -1,1 +1,1 @@
-export {default} from './ListView.component';
+export { default } from './ListView.component';

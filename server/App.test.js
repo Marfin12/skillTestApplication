@@ -4,20 +4,18 @@ const express = require('express');
 const request = require('supertest');
 const chai = require('chai');
 
-const expect = chai.expect; 
+const { expect } = chai;
 
 const createApp = () => {
   app = express();
 
-  var router = express.Router();
-  router.route('/').get((res) => {
-    return res.json({goodCall: true});
-  });
+  const router = express.Router();
+  router.route('/').get((res) => res.json({ goodCall: true }));
 
   app.use(router);
 
   return app;
-}
+};
 
 describe('Our server', () => {
   const app = createApp();
@@ -32,6 +30,6 @@ describe('Our server', () => {
         callStatus = res.body.goodCall;
 
         expect(callStatus).to.equal(true);
-      })
+      });
   });
 });

@@ -16,12 +16,8 @@ jest.mock('react-redux', () => {
     ...ActualReactRedux,
     useSelector: jest
       .fn()
-      .mockImplementationOnce(() => {
-        return lightMode;
-      })
-      .mockImplementationOnce(() => {
-        return darkMode;
-      }),
+      .mockImplementationOnce(() => lightMode)
+      .mockImplementationOnce(() => darkMode),
   };
 });
 jest.mock('../../Components/TextField', () => 'TextField');

@@ -57,12 +57,8 @@ describe('Home Screen Component with loading', () => {
       ...ActualReactRedux,
       useSelector: jest
         .fn()
-        .mockImplementationOnce(() => {
-          return lightMode;
-        })
-        .mockImplementationOnce(() => {
-          return darkMode;
-        }),
+        .mockImplementationOnce(() => lightMode)
+        .mockImplementationOnce(() => darkMode),
     };
   });
 
@@ -106,12 +102,8 @@ describe('Home Screen Component with failed to fetch', () => {
       ...ActualReactRedux,
       useSelector: jest
         .fn()
-        .mockImplementationOnce(() => {
-          return lightMode;
-        })
-        .mockImplementationOnce(() => {
-          return darkMode;
-        }),
+        .mockImplementationOnce(() => lightMode)
+        .mockImplementationOnce(() => darkMode),
     };
   });
 
@@ -158,12 +150,8 @@ describe('Home Screen Component with successfully fetch', () => {
       ...ActualReactRedux,
       useSelector: jest
         .fn()
-        .mockImplementationOnce(() => {
-          return lightMode;
-        })
-        .mockImplementationOnce(() => {
-          return darkMode;
-        }),
+        .mockImplementationOnce(() => lightMode)
+        .mockImplementationOnce(() => darkMode),
     };
   });
 

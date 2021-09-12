@@ -525,9 +525,7 @@ exports[`Home Screen Component with successfully fetch renders dark mode home sc
                 }
               }
             >
-               
               Sport Example
-               
             </TextField>
             <TextField
               numberOfLines={3}
@@ -539,9 +537,7 @@ exports[`Home Screen Component with successfully fetch renders dark mode home sc
                 }
               }
             >
-               
               This is sport description...
-               
             </TextField>
           </View>
         </Card>
@@ -674,9 +670,7 @@ exports[`Home Screen Component with successfully fetch renders light mode home s
                 }
               }
             >
-               
               Sport Example
-               
             </TextField>
             <TextField
               numberOfLines={3}
@@ -688,9 +682,7 @@ exports[`Home Screen Component with successfully fetch renders light mode home s
                 }
               }
             >
-               
               This is sport description...
-               
             </TextField>
           </View>
         </Card>
