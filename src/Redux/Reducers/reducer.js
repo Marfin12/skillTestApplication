@@ -1,6 +1,6 @@
 import Constants from '../../Constants';
 
-const { DARK_THEME, LIGHT_THEME } = Constants;
+const { DARK_THEME, LIGHT_THEME } = Constants.THEME;
 const initialState = { theme: false };
 
 export default (theme = initialState, action) => {
@@ -10,6 +10,6 @@ export default (theme = initialState, action) => {
     case LIGHT_THEME:
       return { theme: false };
     default:
-      return theme;
+      return { theme };
   }
 };
