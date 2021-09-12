@@ -1,6 +1,6 @@
 const styles = {
   container: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   containerScroll: {
     justifyContent: 'center',

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Image, ScrollView } from 'react-native';
+import { Image, ScrollView } from 'react-native';
 
 import TextField from '../../Components/TextField';
 
