@@ -1,9 +1,5 @@
-const { assert } = require('chai');
 const chai = require('chai');
 const schema = require('.');
-const { sportResolver } = require('.');
-
-const url = 'http://localhost:4000';
 
 chai.should();
 describe('Test Static Schema Snapshot', () => {
@@ -18,7 +14,7 @@ describe('Test Static Schema Snapshot', () => {
 
 describe('Test Sport Resolver API', () => {
   const mockedSports = {
-    id: 5,
+    idSport: 5,
     strSport: 'football',
     strSportDescription: 'description',
     strSportThumb: 'image',

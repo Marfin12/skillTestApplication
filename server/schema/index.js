@@ -17,7 +17,7 @@ const SportType = new GraphQLObjectType({
   fields: () => ({
     id: {
       type: GraphQLString,
-      resolve: (sports) => sports.id,
+      resolve: (sports) => sports.idSport,
     },
     name: {
       type: GraphQLString,
