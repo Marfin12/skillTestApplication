@@ -1,11 +1,14 @@
+// @flow
+
 import * as React from 'react';
 import { View, Text } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import styles from './TextField.styles';
 import config from './TextField.config';
+import type { Props } from './TextField.types';
 
-const TextField = (props) => {
+const TextField = (props: Props): React.Node => {
   const getSelect = useSelector(({ themeReducer }) => themeReducer);
   const { theme } = getSelect;
   const {
