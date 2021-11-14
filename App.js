@@ -1,6 +1,7 @@
+// @flow
+
 import * as React from 'react';
 import { ApolloProvider } from 'react-apollo';
-
 import ApolloClient from 'apollo-boost';
 
 import { Provider } from 'react-redux';
@@ -9,14 +10,14 @@ import thunk from 'redux-thunk';
 
 import { Main, reducers } from './src';
 
-const client = new ApolloClient({
+const client: Object = new ApolloClient({
   uri: 'http://192.168.8.114:4000/graphql',
 });
 
 /* eslint-disable no-console */
-console.warn = () => {}; // for development purpose
+(console: Object).warn = () => {}; // for development purpose
 
-const App = () => {
+const App = (): React.Node => {
   const middlewares = applyMiddleware(thunk);
   const store = createStore(reducers, middlewares);
 

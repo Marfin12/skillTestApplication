@@ -1,3 +1,5 @@
+// @flow
+
 import * as React from 'react';
 import { View, Image } from 'react-native';
 import { graphql, compose } from 'react-apollo';
@@ -8,13 +10,14 @@ import Card from '../../Components/Card';
 import ListView from '../../Components/ListView';
 import HeaderList from '../../Components/HeaderList';
 import TextField from '../../Components/TextField';
+import type { Props, Item } from './HomeScreen.types';
 
 import styles from './HomeScreen.styles';
 import { navigateToDetailScreen } from './HomeScreen.utils';
 
-const renderHeader = () => <HeaderList>List View Header</HeaderList>;
+const renderHeader = (): React.Node => <HeaderList>List View Header</HeaderList>;
 
-const renderItemContent = (name, description) => (
+const renderItemContent = (name: string, description: string): React.Node => (
   <View style={styles.containerText}>
     <TextField textStyle={styles.title}>
       {name}
@@ -25,12 +28,12 @@ const renderItemContent = (name, description) => (
   </View>
 );
 
-export const renderItem = (props, navigation) => {
-  const { name, description, image } = props;
+export const renderItem = (item: Item, navigation: () => void): React.Node => {
+  const { name, description, image } = item;
 
   return (
     <Card
-      onPress={navigateToDetailScreen(navigation, props)}
+      onPress={navigateToDetailScreen(navigation, item)}
     >
       <Image source={{ uri: image }} style={styles.photo} />
       {renderItemContent(name, description)}
@@ -44,8 +47,8 @@ const renderEmpty = () => (
   </TextField>
 );
 
-const HomeScreen = (props) => (
-  <>
+const HomeScreen = (props: Props): React.Node => (
+  <React.Fragment>
     <ListView
       style={styles.listView}
       item={props.data.sports}
@@ -54,7 +57,7 @@ const HomeScreen = (props) => (
       emptyList={renderEmpty}
       headerList={renderHeader}
     />
-  </>
+  </React.Fragment>
 );
 
-export default compose(graphql(getSportList))(HomeScreen);
+export default (compose(graphql(getSportList))(HomeScreen): React.AbstractComponent<Props>);

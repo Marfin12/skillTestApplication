@@ -1,7 +1,11 @@
+// @flow
+
+import * as StyleSheet from 'react-native/Libraries/StyleSheet/StyleSheet';
+
 import colors from '../../Colors';
 
 const styles = {
-  container: (whiteTheme) => ({
+  container: (whiteTheme: boolean): StyleSheet.ViewStyle => ({
     flex: 1,
     flexDirection: 'row',
     borderRadius: 5,

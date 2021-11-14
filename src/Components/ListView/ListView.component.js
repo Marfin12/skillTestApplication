@@ -1,10 +1,13 @@
+// @flow
+
 import * as React from 'react';
 import { View, FlatList } from 'react-native';
 
 import styles from './ListView.styles';
 import config from './ListView.config';
+import type { Props } from './ListView.types';
 
-const ListView = (props) => (
+const ListView = (props: Props): React.Node => (
   <View style={[styles.container, props.style]}>
     <FlatList
       contentContainerStyle={styles.contentContainer}

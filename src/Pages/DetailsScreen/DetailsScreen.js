@@ -1,11 +1,14 @@
+// @flow
+
 import * as React from 'react';
 import { Image, ScrollView } from 'react-native';
 
 import TextField from '../../Components/TextField';
 
 import styles from './DetailsScreen.styles';
+import type { Props } from './DetailsScree.types';
 
-const DetailsScreen = (props) => {
+const DetailsScreen = (props: Props): React.Node => {
   const data = props.route.params.props;
 
   return (

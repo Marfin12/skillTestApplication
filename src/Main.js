@@ -1,3 +1,5 @@
+// @flow
+
 import * as React from 'react';
 import { useColorScheme } from 'react-native';
 import { useDispatch } from 'react-redux';
@@ -16,7 +18,7 @@ import { HomeScreen, DetailsScreen, FavoriteScreen } from './Pages';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const StackScreen = () => (
+const StackScreen = (): React.Node => (
   <Stack.Navigator initialRouteName="Home">
     <Stack.Screen name="Home" component={HomeScreen} />
     <Stack.Screen
@@ -27,7 +29,7 @@ const StackScreen = () => (
   </Stack.Navigator>
 );
 
-const Main = () => {
+const Main = (): React.Node => {
   const { DARK_THEME, LIGHT_THEME } = Constants.THEME;
   const colorScheme = useColorScheme() === 'dark' ? DarkTheme : DefaultTheme;
   const globalTheme = colorScheme === DarkTheme ? DARK_THEME : LIGHT_THEME;

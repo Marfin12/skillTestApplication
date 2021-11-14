@@ -4,8 +4,9 @@ import { useSelector } from 'react-redux';
 
 import styles from './Card.styles';
 import config from './Card.config';
+import type { Props } from './Card.types';
 
-const Card = (props) => {
+const Card = (props: Props): React.Node => {
   const getSelect = useSelector(({ themeReducer }) => themeReducer);
   const { theme } = getSelect;
 

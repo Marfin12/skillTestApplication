@@ -1,3 +1,5 @@
+// @flow
+
 const styles = {
   container: {
     flex: 1,

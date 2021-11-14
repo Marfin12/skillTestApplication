@@ -1,3 +1,5 @@
+// @flow
+
 const styles = {
   title: {
     fontSize: 20,

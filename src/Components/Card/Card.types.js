@@ -1,14 +1,12 @@
-import Constants from '../../Constants';
+// @flow
 
-const defaultProps = {
-  children: null,
-  style: {},
-  onPress: Constants.UTILS.EMPTY_FUNCTION,
-};
+import * as React from 'react';
+import type {
+  ViewStyleProp
+} from 'react-native/Libraries/StyleSheet/StyleSheet';
 
-const displayName = 'Card';
-
-export default {
-  defaultProps,
-  displayName,
-};
+export type Props = {|
+  children: React.Node,
+  style: ViewStyleProp,
+  onPress: () => void
+|};

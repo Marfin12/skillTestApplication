@@ -1,10 +1,12 @@
-const defaultProps = {
-  style: {},
-};
+// @flow
 
-const displayName = 'HeaderList';
+import * as React from 'react';
 
-export default {
-  defaultProps,
-  displayName,
-};
+import type {
+  ViewStyleProp
+} from 'react-native/Libraries/StyleSheet/StyleSheet';
+
+export type Props = {|
+  style: ViewStyleProp,
+  children: React.Node
+|};

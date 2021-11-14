@@ -1,3 +1,5 @@
+// @flow
+
 const Constants = {
   THEME: {
     DARK_THEME: 'DARK_THEME',

@@ -1,12 +1,15 @@
+// @flow
+
 import * as React from 'react';
 import { View } from 'react-native';
 import { useSelector } from 'react-redux';
 
+import TextField from '../TextField';
 import styles from './HeaderList.styles';
 import config from './HeaderList.config';
-import TextField from '../TextField';
+import type { Props } from './HeaderList.types';
 
-const HeaderList = (props) => {
+const HeaderList = (props: Props): React.Node => {
   const getSelect = useSelector(({ themeReducer }) => themeReducer);
   const { theme } = getSelect;
   const { style, children } = props;

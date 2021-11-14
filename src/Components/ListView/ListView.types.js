@@ -1,16 +1,21 @@
-import Constants from '../../Constants';
+// @flow
+import type {
+  ViewStyleProp
+} from 'react-native/Libraries/StyleSheet/StyleSheet';
 
-const defaultProps = {
-  headerList: Constants.UTILS.EMPTY_FUNCTION,
-  isFetchingFirst: true,
-  emptyList: Constants.UTILS.EMPTY_FUNCTION,
-  color: 'black',
-  style: {},
-};
+export type Item = {|
+  name: string,
+  description: string,
+  image: string
+|};
 
-const displayName = 'ListView';
-
-export default {
-  defaultProps,
-  displayName,
-};
+export type Props = {|
+  headerList: () => void,
+  isFetchingFirst: boolean,
+  emptyList: () => void,
+  color: string,
+  style: ViewStyleProp,
+  navigation: () => void,
+  itemList: (Item, Function) => null,
+  item: Array<Item>
+|};

@@ -13,7 +13,7 @@ const defaultProps: Props = {
   children: <React.Fragment />
 };
 
-const displayName: string = 'TextField';
+const displayName = 'TextField';
 
 export default {
   defaultProps,

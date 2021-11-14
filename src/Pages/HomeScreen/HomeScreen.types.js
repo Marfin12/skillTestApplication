@@ -1,60 +1,22 @@
-import * as React from 'react';
-import { View, Image } from 'react-native';
-import { graphql, compose } from 'react-apollo';
+// @flow
 
-import { getSportList } from '../../Graphql/sport.graphql';
+import type {
+  ViewStyleProp
+} from 'react-native/Libraries/StyleSheet/StyleSheet';
 
-import Card from '../../Components/Card';
-import ListView from '../../Components/ListView';
-import HeaderList from '../../Components/HeaderList';
-import TextField from '../../Components/TextField';
+import Constants from '../../Constants';
 
-import styles from './HomeScreen.styles';
-import { navigateToDetailScreen } from './HomeScreen.utils';
+export type Item = {|
+  name: string,
+  description: string,
+  image: string
+|};
 
-const renderHeader = () => <HeaderList>List View Header</HeaderList>;
+export type Data = {|
+  sports: Item
+|};
 
-const renderItemContent = (name, description) => (
-  <View style={styles.containerText}>
-    <TextField textStyle={styles.title}>
-      {name}
-    </TextField>
-    <TextField numberOfLines={3} style={styles.description}>
-      {description}
-    </TextField>
-  </View>
-);
-
-export const renderItem = (props, navigation) => {
-  const { name, description, image } = props;
-
-  return (
-    <Card
-      onPress={navigateToDetailScreen(navigation, props)}
-    >
-      <Image source={{ uri: image }} style={styles.photo} />
-      {renderItemContent(name, description)}
-    </Card>
-  );
-};
-
-const renderEmpty = () => (
-  <TextField style={styles.emptyList} textStyle={styles.description}>
-    The list data is empty
-  </TextField>
-);
-
-const HomeScreen = (props) => (
-  <>
-    <ListView
-      style={styles.listView}
-      item={props.data.sports}
-      navigation={props.navigation}
-      itemList={renderItem}
-      emptyList={renderEmpty}
-      headerList={renderHeader}
-    />
-  </>
-);
-
-export default compose(graphql(getSportList))(HomeScreen);
+export type Props = {|
+  data: Data,
+  navigation: () => void
+|};
